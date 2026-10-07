@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>投資予定チェック｜IOB補助金活用サポートサービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --point:#f26b3b;
+    --ink:#553727;
+    --bg:#f9f7ef;
+    --second:#0085c9;
+    --sub:#85634b;
+    --line:#e6ddc9;
+    --white:#fffdf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,.mincho{font-family:"Zen Old Mincho",serif;}
+
+  .hero{
+    background:var(--white);
+    padding:44px 0 36px;
+    border-bottom:3px solid var(--point);
+  }
+  .hero .eyebrow{color:var(--point);font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:12px;}
+  h1,h2{text-wrap:balance;word-break:keep-all;overflow-wrap:anywhere;}
+  .hero h1{font-size:clamp(22px,6vw,28px);font-weight:700;line-height:1.55;margin-bottom:16px;}
+  .hero .lead{font-size:15px;color:var(--sub);}
+  .logo{display:block;margin-top:28px;width:200px;max-width:60%;height:auto;}
+
+  section{padding:40px 0;}
+  .sec-title{font-size:21px;font-weight:700;margin-bottom:22px;padding-left:14px;border-left:5px solid var(--point);line-height:1.5;}
+
+  .video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 6px 20px rgba(85,55,39,.12);}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-cap{font-size:13px;color:var(--sub);margin-top:10px;text-align:center;}
+
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 22px;margin-bottom:16px;}
+
+  .check{list-style:none;}
+  .check li{padding:10px 0 10px 30px;position:relative;font-size:15px;border-bottom:1px dashed var(--line);}
+  .check li:last-child{border-bottom:none;}
+  .check li::before{content:"✓";position:absolute;left:4px;top:10px;color:var(--point);font-weight:700;}
+
+  .quote{border-left:4px solid var(--point);background:var(--white);padding:14px 18px;margin:12px 0;border-radius:0 10px 10px 0;font-size:15px;}
+  .case{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-top:16px;}
+  .case-tag{display:inline-block;background:var(--ink);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:3px 14px;margin-bottom:10px;}
+  .case-num{font-family:"Zen Old Mincho",serif;font-size:18px;font-weight:700;line-height:1.6;margin-bottom:6px;}
+  .case-num b{color:var(--point);font-size:28px;}
+  .case-note{font-size:13px;color:var(--sub);margin-top:8px;}
+  .case .quote{background:var(--bg);}
+  .video-who{display:inline-block;margin-top:6px;font-weight:700;color:var(--ink);}
+  .quote-src{font-size:13px;color:var(--sub);margin-top:14px;}
+
+  .why p{margin-bottom:12px;}
+  .why ul{list-style:none;margin:6px 0 14px;}
+  .why li{padding-left:1.2em;text-indent:-1.2em;}
+  .why li::before{content:"・";color:var(--point);}
+
+  .steps{counter-reset:step;list-style:none;}
+  .steps li{counter-increment:step;position:relative;padding:4px 0 18px 48px;font-size:15px;}
+  .steps li::before{
+    content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;
+    background:var(--point);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+  .steps li strong{display:block;font-size:16px;}
+
+  .cta{background:var(--white);border-top:3px solid var(--point);border-bottom:3px solid var(--point);text-align:center;}
+  .cta p{margin-bottom:18px;}
+  .btn{
+    display:inline-block;width:100%;max-width:420px;background:var(--point);color:#fff;text-decoration:none;
+    font-weight:700;font-size:18px;padding:18px 20px;border-radius:999px;
+    box-shadow:0 6px 0 #c9532a;transition:transform .1s,box-shadow .1s;
+  }
+  .btn:active{transform:translateY(4px);box-shadow:0 2px 0 #c9532a;}
+  .note{font-size:13px;color:var(--sub);margin-top:14px;}
+
+  footer{padding:32px 0 48px;text-align:center;font-size:12px;color:var(--sub);}
+
+  .btn-hero{margin-top:22px;font-size:16px;padding:15px 20px;}
+  .cta{text-align:left;}
+  .cta-lead{margin-bottom:22px;}
+  .target{margin-top:8px;}
+  .target p{font-size:15px;}
+  .target-h{font-weight:700;color:var(--point);margin-top:6px;}
+  .target-h + p{margin-bottom:10px;}
+  #applyForm{text-align:left;}
+  .field{border:0;margin-bottom:20px;}
+  .field label,.field legend{display:block;font-weight:700;font-size:15px;margin-bottom:6px;line-height:1.6;}
+  .req,.opt{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:2px;}
+  .req{background:var(--point);color:#fff;}
+  .opt{background:var(--line);color:var(--sub);}
+  input[type=text],input[type=email],input[type=date],select,textarea{
+    width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;
+    border:1px solid #d6cab0;border-radius:10px;padding:12px 14px;min-height:48px;
+    -webkit-appearance:none;appearance:none;color-scheme:light;
+  }
+  select{background-image:linear-gradient(45deg,transparent 50%,var(--sub) 50%),linear-gradient(135deg,var(--sub) 50%,transparent 50%);
+    background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--point);outline-offset:1px;border-color:var(--point);}
+  .dt{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;}
+  .hint{font-size:13px;color:var(--sub);margin:-8px 0 20px;}
+  .agree{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin-bottom:12px;cursor:pointer;}
+  .agree input{width:20px;height:20px;margin-top:5px;flex-shrink:0;accent-color:var(--point);}
+  .agree a{color:var(--second);}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+  .err{color:#c0392b;font-size:14px;font-weight:700;min-height:1em;margin:10px 0;}
+  #submitBtn{display:block;margin:8px auto 0;border:0;cursor:pointer;font-family:inherit;}
+  #submitBtn:disabled{opacity:.6;cursor:wait;}
+  .done{text-align:center;background:var(--bg);border-radius:14px;padding:28px 20px;}
+  .done-h{font-family:"Zen Old Mincho",serif;font-size:20px;font-weight:700;margin-bottom:12px;}
+  .done p{margin-bottom:10px;}
+
+  .q{border:0;margin-bottom:26px;}
+  .q legend{font-weight:700;font-size:16px;margin-bottom:10px;line-height:1.6;}
+  .q .num{display:inline-block;background:var(--point);color:#fff;border-radius:6px;font-size:13px;padding:0 8px;margin-right:8px;}
+  .opts{display:grid;gap:8px;}
+  .opts label{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #d6cab0;border-radius:10px;padding:12px 14px;cursor:pointer;font-size:15px;}
+  .opts input{width:20px;height:20px;accent-color:var(--point);flex-shrink:0;}
+  .opts label:has(input:checked){border-color:var(--point);background:#fff4ee;}
+  .multi-hint{font-size:13px;color:var(--sub);font-weight:400;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">IOB補助金活用サポートサービス</p>
+    <h1>投資予定チェック</h1>
+    <p class="lead">事業で予定している投資について、6つの質問にお答えください。1〜2分で回答できます。<br>ご回答の内容から、無料個別相談（オンライン45分）をご案内できるかを、すぐにお知らせします。</p>
+    <p class="lead" style="font-size:13px;margin-top:8px;">※このチェックは、補助金が使えるかどうかを審査するものではありません。</p>
+    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business">
+  </div>
+</header>
+
+<section class="cta" id="apply">
+  <div class="wrap">
+    <form id="checkForm" novalidate>
+      <fieldset class="q">
+        <legend><span class="num">1</span>事業の形を教えてください</legend>
+        <div class="opts">
+          <label><input type="radio" name="biz" value="法人">法人</label>
+          <label><input type="radio" name="biz" value="個人事業">個人事業</label>
+          <label><input type="radio" name="biz" value="開業準備中">開業準備中</label>
+          <label><input type="radio" name="biz" value="事業はしていない">事業はしていない</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="num">2</span>予定している投資額は、おおよそいくらですか</legend>
+        <div class="opts">
+          <label><input type="radio" name="amount" value="100万円未満">100万円未満</label>
+          <label><input type="radio" name="amount" value="100万円以上〜300万円未満">100万円以上〜300万円未満</label>
+          <label><input type="radio" name="amount" value="300万円以上〜1,000万円未満">300万円以上〜1,000万円未満</label>
+          <label><input type="radio" name="amount" value="1,000万円以上">1,000万円以上</label>
+          <label><input type="radio" name="amount" value="未定">まだ決まっていない</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="num">3</span>投資する時期の予定はいつですか</legend>
+        <div class="opts">
+          <label><input type="radio" name="timing" value="3か月以内">3か月以内</label>
+          <label><input type="radio" name="timing" value="4〜6か月以内">4〜6か月以内</label>
+          <label><input type="radio" name="timing" value="7〜12か月以内">7〜12か月以内</label>
+          <label><input type="radio" name="timing" value="1年以上先">1年以上先</label>
+          <label><input type="radio" name="timing" value="未定">まだ決まっていない</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="num">4</span>何に投資する予定ですか <span class="multi-hint">（いくつでも）</span></legend>
+        <div class="opts">
+          <label><input type="checkbox" name="what" value="設備">設備（機械・厨房など）</label>
+          <label><input type="checkbox" name="what" value="店舗">店舗（新規出店・改装）</label>
+          <label><input type="checkbox" name="what" value="製造">製造（工場・製造ライン）</label>
+          <label><input type="checkbox" name="what" value="商品開発">商品開発</label>
+          <label><input type="checkbox" name="what" value="IT">IT（システム・ネットショップ）</label>
+          <label><input type="checkbox" name="what" value="その他">その他</label>
+        </div>
+        <input type="text" name="whatNote" id="whatNote" placeholder="よろしければ、具体的にお書きください（任意）" style="margin-top:10px;">
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="num">5</span>投資の内容は、どこまで決まっていますか</legend>
+        <div class="opts">
+          <label><input type="radio" name="clarity" value="具体的に決まっている">具体的に決まっている（見積もりがある など）</label>
+          <label><input type="radio" name="clarity" value="おおよそ決まっている">おおよそ決まっている</label>
+          <label><input type="radio" name="clarity" value="アイデア段階">アイデアの段階</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="num">6</span>いま知りたいことは何ですか <span class="multi-hint">（いくつでも）</span></legend>
+        <div class="opts">
+          <label><input type="checkbox" name="want" value="使える補助金">自分の投資に使える補助金</label>
+          <label><input type="checkbox" name="want" value="申請の条件">申請の条件</label>
+          <label><input type="checkbox" name="want" value="申請書の作り方">申請書の作り方</label>
+          <label><input type="checkbox" name="want" value="採択後の対応">採択されたあとの対応</label>
+          <label><input type="checkbox" name="want" value="その他">その他</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="name">お名前（フルネーム）<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+      </div>
+      <label class="agree">
+        <input type="checkbox" id="agree" name="agree" required>
+        <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します</span>
+      </label>
+
+      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      <p class="err" id="formErr" role="alert"></p>
+      <button type="submit" class="btn" id="submitBtn">回答して結果を見る</button>
+    </form>
+
+    <div id="resA" class="done" hidden>
+      <p class="done-h">無料個別相談をご案内できます</p>
+      <p>ご回答ありがとうございます。<br>現在の投資計画について、無料個別相談（オンライン45分）をご案内できます。<br>下のページから、ご希望の日時をお知らせください。</p>
+      <a class="btn" id="consultBtn" href="index.html">無料個別相談を申し込む</a>
+      <p class="note">同じご案内をメールでもお送りしました。</p>
+    </div>
+    <div id="resB" class="done" hidden>
+      <p class="done-h">ご回答ありがとうございます</p>
+      <p>投資の内容や時期がもう少し具体的になったところで、もう一度「投資予定チェック」にご回答ください。<br>その時点で、無料個別相談をご案内できるかをお知らせします。</p>
+    </div>
+    <div id="resC" class="done" hidden>
+      <p class="done-h">ご回答ありがとうございます</p>
+      <p>今回は、現在のご回答内容では、無料個別相談をご案内していません。<br>今後、事業で100万円以上の投資を予定されることがありましたら、その際にもう一度「投資予定チェック」にご回答ください。</p>
+    </div>
+    <div id="fallback" class="done" hidden>
+      <p class="done-h">送信できませんでした</p>
+      <p>お手数ですが、下のボタンからメールでお送りください。<br>ご回答の内容はメール本文に入ります。</p>
+      <a class="btn" id="mailBtn" href="mailto:hi@iob.bio">メールで送る</a>
+      <p class="note">宛先：hi@iob.bio</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="privacy.html" style="color:inherit;">プライバシーポリシー</a><br>
+  Copyright ©Institut für Organic Business GmbH. All Rights Reserved.
+</footer>
+
+<script>
+  // ▼ GASのウェブアプリURL（未設定のままだと送信せず、メール送信に切り替わる）
+  const GAS_URL = "PASTE_GAS_WEBAPP_URL_HERE";
+  // 流入元（例：?src=band / ?src=ref / ?src=mm1）。最初に手を挙げた入口として記録する
+  const SRC = (new URLSearchParams(location.search).get('src') || '').replace(/[^a-z0-9_-]/gi, '').slice(0, 20);
+
+  const form = document.getElementById('checkForm');
+  const btn = document.getElementById('submitBtn');
+  const err = document.getElementById('formErr');
+  const one = n => (form.querySelector('input[name="' + n + '"]:checked') || {}).value || '';
+  const many = n => [...form.querySelectorAll('input[name="' + n + '"]:checked')].map(i => i.value);
+
+  function showFallback(d){
+    const body = ['投資予定チェックの回答です。', '',
+      'お名前：' + d.name, 'メールアドレス：' + d.email,
+      '1 事業の形：' + d.biz, '2 投資額：' + d.amount, '3 時期：' + d.timing,
+      '4 内容：' + d.what.join('／') + (d.whatNote ? '（' + d.whatNote + '）' : ''),
+      '5 どこまで決まっているか：' + d.clarity, '6 知りたいこと：' + d.want.join('／')].join('\n');
+    document.getElementById('mailBtn').href = 'mailto:hi@iob.bio?subject=' +
+      encodeURIComponent('投資予定チェックの回答') + '&body=' + encodeURIComponent(body);
+    show('fallback');
+  }
+  function show(id){
+    form.hidden = true;
+    const el = document.getElementById(id); el.hidden = false;
+    el.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.textContent = '';
+    const d = { type:'handraise', src:SRC, name:form.name.value.trim(), email:form.email.value.trim(),
+      biz:one('biz'), amount:one('amount'), timing:one('timing'), what:many('what'),
+      whatNote:form.whatNote.value.trim(), clarity:one('clarity'), want:many('want'), website:form.website.value };
+    if (!d.biz || !d.amount || !d.timing || !d.what.length || !d.clarity || !d.want.length) { err.textContent = '1〜6の質問に、すべてお答えください'; return; }
+    if (!d.name) { err.textContent = 'お名前を入力してください'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) { err.textContent = 'メールアドレスを正しく入力してください'; return; }
+    if (!form.agree.checked) { err.textContent = 'プライバシーポリシーへの同意にチェックをお願いします'; return; }
+    if (!/^https:\/\/script\.google\.com\//.test(GAS_URL)) { showFallback(d); return; }
+
+    btn.disabled = true; btn.textContent = '送信中…';
+    // no-corsは失敗しても成功扱いになるため使わない。GASの返すJSON（判定）で画面を出し分ける
+    fetch(GAS_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(d) })
+      .then(r => r.json())
+      .then(res => {
+        if (!res || res.ok !== true || !/^[ABC]$/.test(res.grade)) throw new Error('not ok');
+        if (res.grade === 'A') document.getElementById('consultBtn').href = 'index.html' + (SRC ? '?src=' + SRC : '');
+        show('res' + res.grade);
+      })
+      .catch(() => showFallback(d));
+  });
+</script>
+
+</body>
+</html>
