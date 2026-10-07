@@ -262,7 +262,7 @@
 
 <script>
   // ▼ GASのウェブアプリURL（未設定のままだと送信せず、メール送信に切り替わる）
-  const GAS_URL = "PASTE_GAS_WEBAPP_URL_HERE";
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbwS1hW3rNFCCkWJaWKVjWlG90WoVsB6dQCw565B1PtiQ4eZgE7WenfM-3obbcOU5w8x/exec";
   // 流入元（例：?src=band / ?src=ref / ?src=mm1）。最初に手を挙げた入口として記録する
   const SRC = (new URLSearchParams(location.search).get('src') || '').replace(/[^a-z0-9_-]/gi, '').slice(0, 20);
 
